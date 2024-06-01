@@ -62,6 +62,9 @@ return {
 
         opts.desc = "Restart LSP"
         keymap.set("n", "<leader>rs", "<cmd>LspRestart<CR>", opts) -- mapping to restart lsp if necessary
+
+        keymap.set('n', '<leader>gg', '<cmd>lua vim.lsp.buf.hover()<CR>')
+        keymap.set('n', '<leader>gd', '<cmd>lua vim.lsp.buf.definition()<CR>')
       end
 
       --used to enable autocompletion (assign to every lsp server config)
